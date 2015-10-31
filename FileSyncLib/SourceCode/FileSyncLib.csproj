@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1BA5BAC2-2702-4DD3-B05A-A6869B1963B3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FileSyncLib</RootNamespace>
+    <AssemblyName>FileSyncLib</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Archive\BaseArchive.cs" />
+    <Compile Include="Archive\CompressedArchive7Zip.cs" />
+    <Compile Include="Archive\IndividualCompressedArchive7Zip.cs" />
+    <Compile Include="Archive\OpenArchive.cs" />
+    <Compile Include="FileSync.cs" />
+    <Compile Include="Misc.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsbDrive\DriveDetector.cs" />
+    <Compile Include="UsbDrive\UsbDriveInfo.cs" />
+    <Compile Include="VolumeSnapshot\VolumeSnapshot.cs" />
+    <Compile Include="VolumeSnapshot\VolumeSnapshotComparator.cs" />
+    <Compile Include="VolumeSnapshot\VolumeSnapshotComparatorStatistics.cs" />
+    <Compile Include="VolumeSnapshot\VolumeSnapshotDatabase.cs" />
+    <Compile Include="VolumeSnapshot\VolumeSnapshotDirectory.cs" />
+    <Compile Include="VolumeSnapshot\VolumeSnapshotFile.cs" />
+    <Compile Include="VolumeSnapshot\VolumeSnapshotRevision.cs" />
+    <Compile Include="VolumeSnapshot\VolumeSnapshotXml.cs" />
+    <Compile Include="VolumeSource\VolumeLocalFolderSource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VolumeSource\VolumeSource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VolumeSource\VolumeUsbSource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Volume\BackupRestoreVolume.cs" />
+    <Compile Include="Volume\Operations\VolumeBackupOperation.cs" />
+    <Compile Include="Volume\Operations\VolumeOperationController.cs" />
+    <Compile Include="Volume\Operations\VolumeRestoreOperation.cs" />
+    <Compile Include="Volume\Operations\VolumeSnapshotMergeOperation.cs" />
+    <Compile Include="Volume\Operations\VolumeSyncOperation.cs" />
+    <Compile Include="Volume\SyncVolume.cs" />
+    <Compile Include="Win32File.cs" />
+    <Compile Include="XmlHelp.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

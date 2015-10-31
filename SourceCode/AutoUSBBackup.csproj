@@ -92,6 +92,7 @@
     <Compile Include="GUI\AddNewVolume\AddNewVolumeControl2c.Designer.cs">
       <DependentUpon>AddNewVolumeControl2c.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\IconHelper.cs" />
     <Compile Include="GUI\Main\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +173,7 @@
     <Compile Include="Installer\ProjectInstaller.Designer.cs">
       <DependentUpon>ProjectInstaller.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main\BackgroundThreadWorker.cs" />
     <Compile Include="Main\Config.cs" />
     <Compile Include="Main\Entrypoint.cs" />
     <Compile Include="Main\Log.cs" />
@@ -317,13 +319,9 @@
     <Content Include="ToDo.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\FileSyncLib\SourceCode\FileSyncLib.csproj">
+    <ProjectReference Include="..\FileSyncLib\SourceCode\FileSyncLib.csproj">
       <Project>{1BA5BAC2-2702-4DD3-B05A-A6869B1963B3}</Project>
       <Name>FileSyncLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\pwlib_platform_csharp\pwlib_platform.csproj">
-      <Project>{F45AC684-534C-452B-ACAC-8113434F1B2A}</Project>
-      <Name>pwlib_platform</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
