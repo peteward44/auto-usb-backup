@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoUSBBackup", "AutoUSBBackup.csproj", "{828F1805-B398-4DA7-A05F-66C57B72E852}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1BA5BAC2-2702-4DD3-B05A-A6869B1963B3} = {1BA5BAC2-2702-4DD3-B05A-A6869B1963B3}
+		{F45AC684-534C-452B-ACAC-8113434F1B2A} = {F45AC684-534C-452B-ACAC-8113434F1B2A}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pwlib_platform", "..\..\pwlib_platform_csharp\pwlib_platform.csproj", "{F45AC684-534C-452B-ACAC-8113434F1B2A}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "..\Setup\Setup.vdproj", "{AB6FF03D-87A9-4F86-8B54-947852B7A9F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSyncLib", "..\..\FileSyncLib\SourceCode\FileSyncLib.csproj", "{1BA5BAC2-2702-4DD3-B05A-A6869B1963B3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F45AC684-534C-452B-ACAC-8113434F1B2A} = {F45AC684-534C-452B-ACAC-8113434F1B2A}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{828F1805-B398-4DA7-A05F-66C57B72E852}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{828F1805-B398-4DA7-A05F-66C57B72E852}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{828F1805-B398-4DA7-A05F-66C57B72E852}.Debug|x64.ActiveCfg = Debug|x64
+		{828F1805-B398-4DA7-A05F-66C57B72E852}.Debug|x64.Build.0 = Debug|x64
+		{828F1805-B398-4DA7-A05F-66C57B72E852}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{828F1805-B398-4DA7-A05F-66C57B72E852}.Release|Any CPU.Build.0 = Release|Any CPU
+		{828F1805-B398-4DA7-A05F-66C57B72E852}.Release|x64.ActiveCfg = Release|x64
+		{828F1805-B398-4DA7-A05F-66C57B72E852}.Release|x64.Build.0 = Release|x64
+		{F45AC684-534C-452B-ACAC-8113434F1B2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F45AC684-534C-452B-ACAC-8113434F1B2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F45AC684-534C-452B-ACAC-8113434F1B2A}.Debug|x64.ActiveCfg = Debug|x64
+		{F45AC684-534C-452B-ACAC-8113434F1B2A}.Debug|x64.Build.0 = Debug|x64
+		{F45AC684-534C-452B-ACAC-8113434F1B2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F45AC684-534C-452B-ACAC-8113434F1B2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F45AC684-534C-452B-ACAC-8113434F1B2A}.Release|x64.ActiveCfg = Release|x64
+		{F45AC684-534C-452B-ACAC-8113434F1B2A}.Release|x64.Build.0 = Release|x64
+		{AB6FF03D-87A9-4F86-8B54-947852B7A9F8}.Debug|Any CPU.ActiveCfg = Debug
+		{AB6FF03D-87A9-4F86-8B54-947852B7A9F8}.Debug|x64.ActiveCfg = Debug
+		{AB6FF03D-87A9-4F86-8B54-947852B7A9F8}.Debug|x64.Build.0 = Debug
+		{AB6FF03D-87A9-4F86-8B54-947852B7A9F8}.Release|Any CPU.ActiveCfg = Release
+		{AB6FF03D-87A9-4F86-8B54-947852B7A9F8}.Release|x64.ActiveCfg = Release
+		{AB6FF03D-87A9-4F86-8B54-947852B7A9F8}.Release|x64.Build.0 = Release
+		{1BA5BAC2-2702-4DD3-B05A-A6869B1963B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BA5BAC2-2702-4DD3-B05A-A6869B1963B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BA5BAC2-2702-4DD3-B05A-A6869B1963B3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1BA5BAC2-2702-4DD3-B05A-A6869B1963B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BA5BAC2-2702-4DD3-B05A-A6869B1963B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BA5BAC2-2702-4DD3-B05A-A6869B1963B3}.Release|x64.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

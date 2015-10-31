@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{828F1805-B398-4DA7-A05F-66C57B72E852}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AutoUSBBackup</RootNamespace>
+    <AssemblyName>AutoUSBBackup</AssemblyName>
+    <StartupObject>AutoUSBBackup.Entrypoint</StartupObject>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Target\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Target\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ObjectListView, Version=2.4.1.22291, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI\AddNewVolume\AddNewVolumeControl2a.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\AddNewVolume\AddNewVolumeControl2a.Designer.cs">
+      <DependentUpon>AddNewVolumeControl2a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AddNewVolume\AddNewVolumeControl2b.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\AddNewVolume\AddNewVolumeControl2b.Designer.cs">
+      <DependentUpon>AddNewVolumeControl2b.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AddNewVolume\AddNewVolumeControl2c.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\AddNewVolume\AddNewVolumeControl2c.Designer.cs">
+      <DependentUpon>AddNewVolumeControl2c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Main\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Main\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Main\MainFormEventController.cs" />
+    <Compile Include="GUI\Main\UserControlSwitcher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Main\UserControlSwitcher.Designer.cs">
+      <DependentUpon>UserControlSwitcher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RemoveVolume\RemoveVolumeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RemoveVolume\RemoveVolumeForm.Designer.cs">
+      <DependentUpon>RemoveVolumeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RestoreVolumes\RestoreVolumesControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\RestoreVolumes\RestoreVolumesControl1.Designer.cs">
+      <DependentUpon>RestoreVolumesControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\RestoreVolumes\RestoreVolumesControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\RestoreVolumes\RestoreVolumesControl2.Designer.cs">
+      <DependentUpon>RestoreVolumesControl2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Shared\LogTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Shared\LogTextBox.Designer.cs">
+      <DependentUpon>LogTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Shared\UsbDriveObjectListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Shared\UsbDriveObjectListView.Designer.cs">
+      <DependentUpon>UsbDriveObjectListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TransferVolume\TransferVolumeControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\TransferVolume\TransferVolumeControl1.Designer.cs">
+      <DependentUpon>TransferVolumeControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TransferVolume\TransferVolumeControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\TransferVolume\TransferVolumeControl2.Designer.cs">
+      <DependentUpon>TransferVolumeControl2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TransferVolume\TransferVolumeControl3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\TransferVolume\TransferVolumeControl3.Designer.cs">
+      <DependentUpon>TransferVolumeControl3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TransferVolume\TransferVolumeControlObject.cs" />
+    <Compile Include="GUI\Welcome\WelcomeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Welcome\WelcomeControl.Designer.cs">
+      <DependentUpon>WelcomeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Welcome\WelcomeListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Welcome\WelcomeListView.Designer.cs">
+      <DependentUpon>WelcomeListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Installer\ProjectInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Installer\ProjectInstaller.Designer.cs">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Config.cs" />
+    <Compile Include="Main\Entrypoint.cs" />
+    <Compile Include="Main\Log.cs" />
+    <Compile Include="Main\Spine.cs" />
+    <Compile Include="Main\SpineThread.cs" />
+    <Compile Include="GUI\AddNewVolume\AddNewVolumeControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\AddNewVolume\AddNewVolumeControl1.Designer.cs">
+      <DependentUpon>AddNewVolumeControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AddNewVolume\AddNewVolumeControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\AddNewVolume\AddNewVolumeControl2.Designer.cs">
+      <DependentUpon>AddNewVolumeControl2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AddNewVolume\AddNewVolumeControl3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\AddNewVolume\AddNewVolumeControl3.Designer.cs">
+      <DependentUpon>AddNewVolumeControl3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AddNewVolume\AddNewVolumeControl4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\AddNewVolume\AddNewVolumeControl4.Designer.cs">
+      <DependentUpon>AddNewVolumeControl4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AddNewVolume\AddNewVolumeControlObject.cs" />
+    <Compile Include="GUI\RestoreVolumes\RestoreVolumesControlObject.cs" />
+    <Compile Include="GUI\Shared\CheckedTreeViewHelper.cs" />
+    <Compile Include="GUI\Shared\FileImageListViewHelper.cs" />
+    <Compile Include="GUI\Shared\FormUserControl.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Volume\Volume.cs" />
+    <Compile Include="Volume\VolumeDescriptor.cs" />
+    <Compile Include="Volume\VolumeDescriptorList.cs" />
+    <Compile Include="Volume\VolumeEventController.cs" />
+    <Compile Include="Volume\VolumeMonitor.cs" />
+    <EmbeddedResource Include="GUI\AddNewVolume\AddNewVolumeControl1.resx">
+      <DependentUpon>AddNewVolumeControl1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AddNewVolume\AddNewVolumeControl2.resx">
+      <DependentUpon>AddNewVolumeControl2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AddNewVolume\AddNewVolumeControl3.resx">
+      <DependentUpon>AddNewVolumeControl3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AddNewVolume\AddNewVolumeControl4.resx">
+      <DependentUpon>AddNewVolumeControl4.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GUI\AddNewVolume\AddNewVolumeControl2a.resx">
+      <DependentUpon>AddNewVolumeControl2a.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AddNewVolume\AddNewVolumeControl2b.resx">
+      <DependentUpon>AddNewVolumeControl2b.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AddNewVolume\AddNewVolumeControl2c.resx">
+      <DependentUpon>AddNewVolumeControl2c.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Main\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RemoveVolume\RemoveVolumeForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RemoveVolumeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RestoreVolumes\RestoreVolumesControl1.resx">
+      <DependentUpon>RestoreVolumesControl1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RestoreVolumes\RestoreVolumesControl2.resx">
+      <DependentUpon>RestoreVolumesControl2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Shared\LogTextBox.resx">
+      <DependentUpon>LogTextBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Shared\UsbDriveObjectListView.resx">
+      <DependentUpon>UsbDriveObjectListView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TransferVolume\TransferVolumeControl1.resx">
+      <DependentUpon>TransferVolumeControl1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TransferVolume\TransferVolumeControl2.resx">
+      <DependentUpon>TransferVolumeControl2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TransferVolume\TransferVolumeControl3.resx">
+      <DependentUpon>TransferVolumeControl3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Welcome\WelcomeControl.resx">
+      <DependentUpon>WelcomeControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Welcome\WelcomeListView.resx">
+      <DependentUpon>WelcomeListView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Installer\ProjectInstaller.resx">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\pendrive32x32.png" />
+    <EmbeddedResource Include="Resources\pendrivebusy32x32.png" />
+    <EmbeddedResource Include="Resources\localfolder32x32.png" />
+    <EmbeddedResource Include="Resources\localfolderbusy32x32.png" />
+    <Content Include="ToDo.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\FileSyncLib\SourceCode\FileSyncLib.csproj">
+      <Project>{1BA5BAC2-2702-4DD3-B05A-A6869B1963B3}</Project>
+      <Name>FileSyncLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\pwlib_platform_csharp\pwlib_platform.csproj">
+      <Project>{F45AC684-534C-452B-ACAC-8113434F1B2A}</Project>
+      <Name>pwlib_platform</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

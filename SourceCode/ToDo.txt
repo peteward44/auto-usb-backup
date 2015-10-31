@@ -1,0 +1,36 @@
+
+bugs
+
+- Dispose of Icons in icon cache in FileImageListViewHelper on shutdown (un-used in current implementation)
+
+- Transfer feature is broken due to seperating out task to VolumeSource class
+
+features
+
+- Allow user to select time period in interface
+
+- Have own messages for 'Transfer' method (currently says it is a restore)
+
+- Have cancel button on mainform for cancelling backup / restore
+
+
+setup
+
+- execute program after setup has completed
+
+
+
+Descriptor (config.xml)
+ DONE -> EventController (all events come off here)
+ -> Identifier (volume.vol)
+ -> Volume (operations)
+ 	-> IStorageType
+		|- UsbDriveStorageType
+		|- LocalFolderStorageType
+
+
+- display progress in title bar for restore / backup
+- automatically create subfolder when creating a new volume
+- cancel button
+- disable right click context menu options during operation
+
